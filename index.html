@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Jakub Purity Test | jakublabs.xyz</title>
+    <link rel="stylesheet" href="styles.css?v=1" />
+  </head>
+  <body>
+    <main class="app" aria-labelledby="page-title">
+      <section class="hero">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>purity.jakublabs.xyz</span>
+        </div>
+        <p class="kicker">official assessment</p>
+        <h1 id="page-title">The Jakub Purity Test</h1>
+        <p class="lede">answer yes or no. your score is the percentage of questions you survived by saying no.</p>
+      </section>
+
+      <section class="panel intro" id="intro">
+        <div>
+          <p class="kicker">rules</p>
+          <h2>35 questions. no mercy.</h2>
+          <p>this is a joke purity test. nothing is stored, uploaded, or remembered after you leave the page.</p>
+        </div>
+        <button class="button button-light" id="start-test" type="button">Start Test</button>
+      </section>
+
+      <section class="test-layout" id="test" hidden>
+        <aside class="panel progress-panel">
+          <p class="kicker">progress</p>
+          <strong id="progress-count">1/35</strong>
+          <div class="progress-track" aria-hidden="true">
+            <span id="progress-bar"></span>
+          </div>
+          <p id="running-score">purity currently unknown</p>
+        </aside>
+
+        <section class="panel question-panel">
+          <p class="kicker" id="question-kicker">question 1</p>
+          <h2 id="question-text"></h2>
+          <div class="answer-grid">
+            <button class="answer yes" type="button" data-answer="yes">Yes</button>
+            <button class="answer no" type="button" data-answer="no">No</button>
+          </div>
+          <button class="button button-dark" id="back-button" type="button">Back</button>
+        </section>
+      </section>
+
+      <section class="panel result-panel" id="result" hidden>
+        <p class="kicker">final score</p>
+        <h2><span id="score-value">--</span>%</h2>
+        <p class="verdict" id="verdict"></p>
+        <p class="breakdown" id="breakdown"></p>
+        <div class="button-row">
+          <button class="button button-light" id="render-result" type="button">Render Graphic</button>
+          <button class="button button-dark" id="restart-test" type="button">Run It Back</button>
+        </div>
+      </section>
+    </main>
+
+    <canvas id="result-canvas" width="1200" height="1500" hidden></canvas>
+    <script src="script.js?v=2"></script>
+  </body>
+</html>
